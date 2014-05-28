@@ -1,7 +1,8 @@
 package com.example.hellogalaxy;
 
-import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
@@ -38,7 +39,8 @@ View.OnClickListener
 				String inputMsg2 = etv2.getText().toString();
 				TextView tv = (TextView)findViewById(R.id.txvMsg);
 				tv.setText("あなたでしたか、" + inputMsg + inputMsg2 +"さん。");
-				
+				Intent intent = new Intent(MainActivity.this,MsgActivity.class);
+				startActivity(intent);
 		}	
 	}
 
